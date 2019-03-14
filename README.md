@@ -4,7 +4,7 @@ Private Repository for HW assignments of Stat 133 (Spring 2019)
 
 - Name: Haoyi Qiu
 - Github username: AliceQiuhy
-- Email: alice_qiuhy@hotmail.com
+- Email: alice_qiuhy@hotmail.com (alice_qiuhy@berkeley.edu)
 - Lab section: 102
 - GSI: Dodo Qian
 
