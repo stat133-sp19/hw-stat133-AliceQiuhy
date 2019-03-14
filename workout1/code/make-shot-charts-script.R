@@ -1,11 +1,11 @@
-#######################################################
-# title: Make-shots-data-script
-# description: Download the data, munipulate the data
-#              and combine the separating data sets
-#              into a data set.
-# input(s): 5 csv files
-# output(s): 6 summary txt files, 1 shots data csv file
-#######################################################
+##############################################################
+# title: Make-shot-charts-script
+# description: Using the shots_data and basketball court
+#              background to draw the shot-charts.
+# input(s): 5 players' shots_data tables, 1 nba-court jpg file
+# output(s): 6 shot-charts pdf files (5 players and facetted),
+#            1 shot-charts png files (facetted)
+#############################################################
 
 library(ggplot2)
 library(jpeg)
