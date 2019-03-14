@@ -1,18 +1,18 @@
-##############################################################
-# title: Make-shot-charts-script
-# description: Using the shots_data and basketball court 
-#              background to draw the shot-charts.
-# input(s): 5 players' shots_data tables, 1 nba-court jpg file
-# output(s): 6 shot-charts pdf files (5 players and facetted), 
-#            1 shot-charts png files (facetted)
-#############################################################
+#######################################################
+# title: Make-shots-data-script
+# description: Download the data, munipulate the data
+#              and combine the separating data sets
+#              into a data set.
+# input(s): 5 csv files
+# output(s): 6 summary txt files, 1 shots data csv file
+#######################################################
 
 library(ggplot2)
 library(jpeg)
 library(grid)
 
 # court imate (to be used as background of plot)
-court_file <- "../images/nba-court.jpg"
+court_file <- "workout01/images/nba-court.jpg"
 
 # create raste object
 court_image <- rasterGrob(
@@ -30,7 +30,7 @@ curry_shot_chart <- ggplot(data = curry) +
   ggtitle('Shot Chart: Stephen Curry (2016 Season)') +
   theme_minimal()
 
-ggsave("../images/stephen-curry-shot-chart.pdf", 
+ggsave("workout01/images/stephen-curry-shot-chart.pdf", 
        plot = curry_shot_chart, width = 6.5, height = 5)
 
 thompson_shot_chart <- ggplot(data = thompson) + 
@@ -40,7 +40,7 @@ thompson_shot_chart <- ggplot(data = thompson) +
   ggtitle('Shot Chart: Klay Thompson (2016 Season)') +
   theme_minimal()
 
-ggsave("../images/klay-thompson-shot-chart.pdf", 
+ggsave("workout01/images/klay-thompson-shot-chart.pdf", 
        plot = thompson_shot_chart, width = 6.5, height = 5)
 
 durant_shot_chart <- ggplot(data = durant) + 
@@ -50,7 +50,7 @@ durant_shot_chart <- ggplot(data = durant) +
   ggtitle('Shot Chart: Kevin Durant (2016 Season)') +
   theme_minimal()
 
-ggsave("../images/kevin-durant-shot-chart.pdf", 
+ggsave("workout01/images/kevin-durant-shot-chart.pdf", 
        plot = durant_shot_chart, width = 6.5, height = 5)
 
 green_shot_chart <- ggplot(data = green) + 
@@ -60,7 +60,7 @@ green_shot_chart <- ggplot(data = green) +
   ggtitle('Shot Chart: Draymond Green (2016 Season)') +
   theme_minimal()
 
-ggsave("../images/draymond-green-shot-chart.pdf", 
+ggsave("workout01/images/draymond-green-shot-chart.pdf", 
        plot = green_shot_chart, width = 6.5, height = 5)
 
 iguodala_shot_chart <- ggplot(data = iguodala) + 
@@ -70,7 +70,7 @@ iguodala_shot_chart <- ggplot(data = iguodala) +
   ggtitle('Shot Chart: Andre Iguodala (2016 Season)') +
   theme_minimal()
 
-ggsave("../images/andre-iguodala-shot-chart.pdf", 
+ggsave("workout01/images/andre-iguodala-shot-chart.pdf", 
        plot = iguodala_shot_chart, width = 6.5, height = 5)
 
 # facetted shot chart
@@ -82,7 +82,7 @@ gsw_shot_charts <- ggplot(data = shots_data, aes(x = x, y = y, color = shot_made
   ggtitle('Shot Chart: GSW (2016 Season)') +
   theme_minimal()
 
-ggsave("../images/gsw-shot-charts.pdf", 
+ggsave("workout01/images/gsw-shot-charts.pdf", 
        plot = gsw_shot_charts, width = 8, height = 7)
-ggsave("../images/gsw-shot-charts.png", 
+ggsave("workout01/images/gsw-shot-charts.png", 
        plot = gsw_shot_charts, width = 8, height = 7)

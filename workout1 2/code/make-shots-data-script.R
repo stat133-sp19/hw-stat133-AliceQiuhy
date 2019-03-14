@@ -8,11 +8,11 @@
 #############################################################
 
 # reading file with relative path
-curry <- read.csv("../data/stephen-curry.csv", stringsAsFactors = FALSE)
-iguodala <- read.csv("../data/andre-iguodala.csv", stringsAsFactors = FALSE)
-green <- read.csv("../data/draymond-green.csv", stringsAsFactors = FALSE)
-durant <- read.csv("../data/kevin-durant.csv", stringsAsFactors = FALSE)
-thompson <- read.csv("../data/klay-thompson.csv", stringsAsFactors = FALSE)
+curry <- read.csv("workout01/data/stephen-curry.csv", stringsAsFactors = FALSE)
+iguodala <- read.csv("workout01/data/andre-iguodala.csv", stringsAsFactors = FALSE)
+green <- read.csv("workout01/data/draymond-green.csv", stringsAsFactors = FALSE)
+durant <- read.csv("workout01/data/kevin-durant.csv", stringsAsFactors = FALSE)
+thompson <- read.csv("workout01/data/klay-thompson.csv", stringsAsFactors = FALSE)
 
 # Add a column name to each imported data frame, that contains the name of the corresponding player:
 iguodala$name <-  "Andre Iguodala"
@@ -56,23 +56,23 @@ curry$minute <- curry$period * 12 - curry$minutes_remaining
 # the output/ folder using relative paths.
 ###########################################################################
 
-sink("../output/andre-iguodala-summary.txt")
+sink("workout01/output/andre-iguodala-summary.txt")
 summary(iguodala)
 sink()
 
-sink("../output/draymond-green-summary.txt")
+sink("workout01/output/draymond-green-summary.txt")
 summary(green)
 sink()
 
-sink("../output/kevin-durant-summary.txt")
+sink("workout01/output/kevin-durant-summary.txt")
 summary(durant)
 sink()
 
-sink("../output/klay-thompson-summary.txt")
+sink("workout01/output/klay-thompson-summary.txt")
 summary(thompson)
 sink()
 
-sink("../output/stephen-curry-summary.txt")
+sink("workout01/output/stephen-curry-summary.txt")
 summary(curry)
 sink()
 
@@ -90,9 +90,9 @@ sink()
 shots_data <- rbind(curry, durant, green, iguodala, thompson)
 
 # export the assembled table
-write.csv(shots_data, file = "../data/shots-data.csv")
+write.csv(shots_data, file = "workout01/data/shots-data.csv")
 
 # export summary information
-sink("../output/shots-data-summary.txt")
+sink("workout01/output/shots-data-summary.txt")
 summary(shots_data)
 sink()
