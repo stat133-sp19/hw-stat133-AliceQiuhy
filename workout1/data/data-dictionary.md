@@ -1,4 +1,4 @@
-This is the data-dictionary
+This is the data-dictionary . 
 #####team_name: the name of the team.  
 #####game_date: the date time of the game.  
 #####season: the season of the game.  
