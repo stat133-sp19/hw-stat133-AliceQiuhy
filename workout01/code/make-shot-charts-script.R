@@ -1,12 +1,11 @@
-##############################################################
+###########################################################################
 # title: Make-shot-charts-script
-# description: Using the shots_data and basketball court 
-#              background to draw the shot-charts corresponding
-#              to different players.
+# description: Using the shots_data and basketball court background to draw 
+#              the shot-charts corresponding to different players.
 # input(s): 5 players' shots_data tables, 1 nba-court jpg file
-# output(s): 6 shot-charts pdf files (5 players and facetted), 
+# output(s): 6 shot-charts pdf files (5 players and 1 facetted), 
 #            1 shot-charts png files (facetted)
-#############################################################
+########################################################################
 
 library(ggplot2)
 library(jpeg)
