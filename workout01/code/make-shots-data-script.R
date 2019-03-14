@@ -1,11 +1,10 @@
-#######################################################
+#######################################################################
 # title: Make-shots-data-script
-# description: Download the data, munipulate the data
-#              and combine the separating data sets
-#              into a data set.
+# description: Download the data from Github, munipulate the data
+#              and combine the separating data sets into a data set.
 # input(s): 5 csv files
 # output(s): 6 summary txt files, 1 shots data csv file
-#######################################################
+#######################################################################
 
 # reading file with relative path
 curry <- read.csv("../data/stephen-curry.csv", stringsAsFactors = FALSE)
@@ -36,12 +35,12 @@ thompson$shot_made_flag[thompson$shot_made_flag == "y"] <- "shot_yes"
 curry$shot_made_flag[curry$shot_made_flag == "n"] <- "shot_no"
 curry$shot_made_flag[curry$shot_made_flag == "y"] <- "shot_yes"
 
-###########################################################################
+#################################################################################################
 # Add a column minute that contains the minute number where a shot occurred. 
 # For instance, if a shot took place during period = 1 and minutes_remaining = 8, 
 # then this should correspond to a value minute = 4. Likewise, if a shot took place 
 # during period = 4 and minutes_remaining = 2 then this should correspond to a value minute = 46. 
-###########################################################################
+#################################################################################################
 
 iguodala$minute <- iguodala$period * 12 - iguodala$minutes_remaining
 green$minute <- green$period * 12 - green$minutes_remaining
@@ -49,12 +48,12 @@ durant$minute <- durant$period * 12 - durant$minutes_remaining
 thompson$minute <- thompson$period * 12 - thompson$minutes_remaining
 curry$minute <- curry$period * 12 - curry$minutes_remaining
 
-###########################################################################
+##################################################################################
 # Use sink() to send the summary() output of each imported data frame into 
 # individuals text files: andre-iguodala-summary.txt, draymond-green-summary.txt, 
 # etc. Dur- ing each sinking operation, the produced summaries should be sent to 
 # the output/ folder using relative paths.
-###########################################################################
+##################################################################################
 
 sink("../output/andre-iguodala-summary.txt")
 summary(iguodala)
@@ -76,7 +75,7 @@ sink("../output/stephen-curry-summary.txt")
 summary(curry)
 sink()
 
-###########################################################################
+###################################################################################
 # (1) Use the row binding function rbind() to stack the tables into one single 
 #     data frame (or tibble object). 
 # (2) Export (i.e. write) the assembled table as a CSV file shots-data.csv inside 
@@ -84,7 +83,7 @@ sink()
 # (3) Use sink() to send the summary() output of the assembled table. Send this 
 #     output to a text file named shots-data-summary.txt inside the output/ folder. 
 #     Use a relative path when exporting the R output. 
-###########################################################################
+###################################################################################
 
 # combine dataframe
 shots_data <- rbind(curry, durant, green, iguodala, thompson)
