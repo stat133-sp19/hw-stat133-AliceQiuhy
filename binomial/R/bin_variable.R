@@ -16,6 +16,7 @@ bin_variable <- function(trials = 1, prob = 0.5) {
     stop("\n invalid 'prob' value")
   }
   res <- list(trials = trials, prob = prob)
+  class(res) <- "binvar"
   res
 }
 
@@ -38,6 +39,7 @@ summary.binvar <- function(object, ...) {
               mode = aux_mode(object$trials, object$prob),
               skewness = round(aux_skewness(object$trials, object$prob),7),
               kurtosis = round(aux_kurtosis(object$trials, object$prob),7))
+  class(res) <- "summary.binvar"
   res
 }
 
