@@ -1,0 +1,65 @@
+---
+title: "Introduction to Package binomial"
+author: "Haoyi Qiu"
+date: "4/28/2019"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction to Package binomial}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
+---
+
+```{r setup, echo = FALSE, message = FALSE}
+knitr::opts_chunk$set(collapse = T, comment = "#>")
+library(binomial)
+```
+
+## Binomial distribution 
+
+The package `bimonial` implements functions for calculating probabilities of a Binomial random variable, and related calculatiion such as the probability distribution, the expected values, variance, etc. 
+
+## Function `bin_choose`
+
+Function `bin_choose` calulates the number of combinations in which k success can occur in n trials.
+
+```{r}
+bin_choose(n = 5, k = 2)
+```
+
+## Function `bin_probability`
+
+Function `bin_probability` calculates the probability of the given successs and trials. 
+
+```{r}
+bin_probability(2,5,0.5)
+```
+
+## Function `bin_distribution`
+
+Function `bin_distribution` shows the binomial probability distribution.
+
+```{r}
+dis1 <- bin_distribution(trials = 5, prob = 0.5)
+dis1
+plot(dis1)
+```
+
+## Function `bin_cumulative`
+
+Function `bin_distribution` shows the binomial cumulative distribution.
+
+```{r}
+dis2 <- bin_cumulative(trials = 5, prob = 0.5)
+dis2
+plot(dis2)
+```
+
+## Function `bin_variable`
+
+Function `bin_variable` calculates the summary measures.
+```{r}
+bin1 <- bin_variable(trials = 10, p = 0.3)
+bin1
+binsum1 <- summary(bin1)
+binsum1
+```
