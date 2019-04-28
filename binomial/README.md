@@ -23,7 +23,7 @@ Install the development version from GitHub via the package `"devtools"`:
 
 ``` r
 # development version from GitHub:
-#install.packages("devtools") 
+# install.packages("devtools") 
 # install "binomial" (without vignettes)
 devtools::install_github("stat133-sp19/hw-stat133-AliceQiuhy/tree/master/binomial")
 # install "binomial" (with vignettes)
@@ -80,12 +80,6 @@ plot(dis2)
 
 #bin_variable
 bin1 <- bin_variable(trials = 10, p = 0.3)
-bin1
-#> $trials
-#> [1] 10
-#> 
-#> $prob
-#> [1] 0.3
 binsum1 <- summary(bin1)
 binsum1
 #>        Length Class  Mode   
