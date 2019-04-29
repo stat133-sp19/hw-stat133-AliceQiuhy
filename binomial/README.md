@@ -80,9 +80,24 @@ plot(dis2)
 
 #bin_variable
 bin1 <- bin_variable(trials = 10, p = 0.3)
+bin1
+#> "Binomial variable"
+#> 
+#> Parameters
+#> - number of trials: 10 
+#> - prob of success : 0.3
 binsum1 <- summary(bin1)
 binsum1
-#>        Length Class  Mode   
-#> trials 1      -none- numeric
-#> prob   1      -none- numeric
+#> "Binomial variable"
+#> 
+#> Parameters
+#> - number of trials: 10 
+#> - prob of success : 0.3 
+#> 
+#> Measures
+#> - mean    : 3 
+#> - variance: 2.1 
+#> - mode    : 3 
+#> - skewness: 0.2760262 
+#> - kurtosis: -0.1238095
 ```
