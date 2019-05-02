@@ -9,7 +9,9 @@ Overview
 -   `bin_probability` function calculates the probability of getting successes in trials with probability prob per trial.
 -   `bin_distribution` function calculates the probability distribution.
 -   `bin_cumulative` function calculates the cumulative distribution.
--   `bin_variable` functions shows the information about variables.
+-   `bin_variable` function shows the information about variables.
+-   `plot` function can be used after calling `bin_distribution` or `bin_cumulative` to give you a success vs probability plot.
+-   `summary` function can be used after calling `bin_variable` to show the measure information about variables.
 
 Motivation
 ----------
