@@ -12,6 +12,9 @@ check_prob <- function(prob = 1) {
 
 # test if an input trails is a valid value for number of trails (i.e. n is a non-negative integer)
 check_trials <- function(trials = 1) {
+  if ((!is.numeric(trials))) {
+    stop("\n'trials' values must be a numeric value")
+  }
   if (length(trials) != 1) {
     stop("\n'trials' values must be a numeric value with length 1")
   }
@@ -23,6 +26,9 @@ check_trials <- function(trials = 1) {
 
 # test if an input success is a valid value for number of successes (i.e. 0<=k<=n)
 check_success <- function(success = 1, trials = 1) {
+  if ((!is.numeric(success)) | (!is.numeric(trials))) {
+    stop("\n'success' or 'trials' values must be a numeric value")
+  }
   if (length(success) > 1){
     if (any(success > trials)){
       stop("\n'success' cannot be greater than trials")
