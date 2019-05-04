@@ -45,7 +45,7 @@ check_success <- function(success = 1, trials = 1) {
     }
   }else {
     if (success < 0) {
-      stop("\n'success' cannot be greater than trials")
+      stop("\n invalid 'success' value")
     }
   }
 
