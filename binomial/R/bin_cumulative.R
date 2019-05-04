@@ -1,5 +1,5 @@
 #' @title bin_cumulative
-#' @description calculating the  cumulative distribution
+#' @description calculating the cumulative distribution
 #' @param trials the number of trials
 #' @param prob the probability of success per trial
 #' @return a data.frame with two classes

@@ -2,7 +2,7 @@
 #' @description calculating the probability distribution
 #' @param trials the number of trials
 #' @param prob the probability of success per trial
-#' @return a data.frame with two classes
+#' @return a data.frame with two classes: c("bindis", "data.frame")
 #' @export
 #' @examples
 #' # binomial probability distribution
@@ -18,7 +18,6 @@ bin_distribution <- function(trials = 1, prob = 0.5) {
   res
 }
 
-#' @import graphics
 #' @export
 plot.bindis <- function(x, ...) {
   barplot(x$probability, names.arg = x$success, xlab = "success", ylab = "probability")
