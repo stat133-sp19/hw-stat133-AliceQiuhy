@@ -15,7 +15,7 @@ bin_cumulative(trials = 1, prob = 0.5)
 a data.frame with two classes
 }
 \description{
-calculating the  cumulative distribution
+calculating the cumulative distribution
 }
 \examples{
 # binomial cumulative distribution

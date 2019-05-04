@@ -12,7 +12,7 @@ bin_distribution(trials = 1, prob = 0.5)
 \item{prob}{the probability of success per trial}
 }
 \value{
-a data.frame with two classes
+a data.frame with two classes: c("bindis", "data.frame")
 }
 \description{
 calculating the probability distribution
