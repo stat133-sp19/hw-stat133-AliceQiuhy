@@ -10,6 +10,9 @@
 #' bin_choose(5, 1:3)
 
 bin_choose <- function(n = 1, k = 1) {
+  if (!(is.numeric(n)) | !(is.numeric(k))) {
+    stop("\n 'n' and 'k' need to be numeric number")
+  }
   if (length(k) > 1) {
     if (any(k > n)) {
       stop("\n'k' cannot be greater than n")
